@@ -3,29 +3,13 @@ import com.market.bookitem.Book;
 
 public class CartItem {
 	
-	//private String[] itemBook = new String[7];
 	private Book itemBook;
 	private String bookID;
 	private int quantity;
 	private int totalPrice;
 	
 	public 	CartItem() {}
-	
-	/*public 	CartItem(String[] book) {
-		this.itemBook = book;
-		this.bookID = book[0];
-		this.quantity = 1;
-		updateTotalPrice();
-	}
-	
-	public String[] getItemBook() {
-		return itemBook;
-	}
-	
-	public String[] getItemBook(String[] itembook) {
-		return itembook = itemBook;
-	}
-*/	
+
 	
 	public CartItem(Book booklist) {
 		this.itemBook = booklist;
