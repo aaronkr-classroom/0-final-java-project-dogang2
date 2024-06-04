@@ -39,7 +39,7 @@ public class CartItem {
 		this.updateTotalPrice();
 	}
 	
-	public int getQuantiy() { 
+	public int getQuantity() { 
 		return quantity;
 	}
 	public void setQuantity(int quantity) {

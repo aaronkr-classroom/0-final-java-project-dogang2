@@ -51,7 +51,7 @@ public class Cart implements CartInterface {
 		System.out.println("    도서ID\t|    수량\t|    합계");
 		for(int i = 0; i < mCartItem.size(); i++) {
 			System.out.println("    " + mCartItem.get(i).getBookID() + "\t|");
-			System.out.println("    " + mCartItem.get(i).getQuantiy() + "\t|");
+			System.out.println("    " + mCartItem.get(i).getQuantity() + "\t|");
 			System.out.println("    " + mCartItem.get(i).getTotalPrice());
 			System.out.println("  ");
 		}
@@ -61,7 +61,7 @@ public class Cart implements CartInterface {
 		boolean flag = false;
 		for (int i = 0; i < mCartItem.size(); i++) {
 			if (bookId.equals(mCartItem.get(i).getBookID())) {
-				mCartItem.get(i).setQuantity(mCartItem.get(i).getQuantiy()+1);
+				mCartItem.get(i).setQuantity(mCartItem.get(i).getQuantity()+1);
 				flag = true;
 			}
 		}
