@@ -1,18 +1,17 @@
 package com.market.member;
 
 public class UserInIt {
-	private static User mUSer;
-	
+	private static User mUser;
+
 	public static void setmUser(User mUser) {
-		UserInIt.mUSer = mUser;
+		UserInIt.mUser = mUser;
 	}
-	
+
 	public static void init(String name, int phone) {
-		mUSer = new User(name, phone);
-		
+		mUser = new User(name, phone);
 	}
-	
+
 	public static User getmUser() {
-		return mUSer;
+		return mUser;
 	}
 }

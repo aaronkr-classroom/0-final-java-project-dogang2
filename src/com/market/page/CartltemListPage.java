@@ -28,7 +28,7 @@ public class CartltemListPage extends JPanel{
 		bookPanel.setBounds(0, 0, 1000, 400);
 		add(bookPanel);
 
-		ArrayList<CartItem> cartItem = mCart.getCartItem();
+		ArrayList<CartItem> cartItem = mCart.getmCartItem();
 		Object[][] content = new Object[cartItem.size()][tableHeader.length];
 		Integer totalPrice = 0;
 		for (int i = 0; i < cartItem.size(); i++) {
