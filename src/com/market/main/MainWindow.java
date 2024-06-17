@@ -5,8 +5,6 @@ import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import com.market.page.GuestInfoPage;
-import com.market.page.GusetInfoPage;
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import com.market.cart.Cart;
@@ -14,7 +12,6 @@ import com.market.bookitem.BookInIt;
 import com.market.page.CartAddItemPage;
 import com.market.page.CartItemListPage;
 import com.market.page.CartShippingPage;
-import com.market.page.CartltemListPage;
 import com.market.page.AdminLoginDialog;
 import com.market.page.AdminPage;
 
@@ -71,11 +68,11 @@ public class MainWindow extends JFrame {
 
 		bt1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				mPagePanel.removeAll(); 
+				mPagePanel.removeAll(); // 패널(mPagePanel)에 표시된 구성 요소 모두 삭제
 
-				mPagePanel.add("고객 정보 확인", new GusetInfoPage(mPagePanel)); 
-				mPagePanel.revalidate();
-				mPagePanel.repaint(); 
+				mPagePanel.add("고객 정보 확인", new GuestInfoPage(mPagePanel)); // 패널(mPagePanel)에 GuestInfoPage의 내용 출력
+				mPagePanel.revalidate(); // 구성 요소 가로/세로 속성 변경하여 호출
+				mPagePanel.repaint(); // 구성요소 모양을 변경하여 호출
 			}
 		});
 
@@ -91,7 +88,7 @@ public class MainWindow extends JFrame {
 					JOptionPane.showMessageDialog(bt2, "장바구니에 항목이 없습니다", "장바구니 상품 목록 보기", JOptionPane.ERROR_MESSAGE);
 				else {
 					mPagePanel.removeAll();
-					mPagePanel.add("장바구니 상품 목록 보기", new CartltemListPage(mPagePanel, mCart));
+					mPagePanel.add("장바구니 상품 목록 보기", new CartItemListPage(mPagePanel, mCart));
 					mPagePanel.revalidate();
 					mPagePanel.repaint();
 
@@ -112,7 +109,7 @@ public class MainWindow extends JFrame {
 				else {
 					mPagePanel.removeAll();
 					menuCartClear(bt3);
-					mPagePanel.add("장바구니 비우기", new CartltemListPage(mPagePanel, mCart));
+					mPagePanel.add("장바구니 비우기", new CartItemListPage(mPagePanel, mCart));
 					mPagePanel.revalidate();
 					mPagePanel.repaint();
 				}
@@ -149,7 +146,7 @@ public class MainWindow extends JFrame {
 				else {
 
 					mPagePanel.removeAll();
-					CartltemListPage cartList = new CartltemListPage(mPagePanel, mCart);
+					CartItemListPage cartList = new CartItemListPage(mPagePanel, mCart);
 					if (mCart.mCartCount == 0)
 						JOptionPane.showMessageDialog(bt6, "장바구니에 항목이 없습니다");
 					else if (cartList.mSelectRow == -1)
@@ -160,7 +157,7 @@ public class MainWindow extends JFrame {
 						cartList.mSelectRow = -1;
 					}
 				}
-				mPagePanel.add("장바구니의 항목 삭제하기", new CartltemListPage(mPagePanel, mCart));
+				mPagePanel.add("장바구니의 항목 삭제하기", new CartItemListPage(mPagePanel, mCart));
 
 				mPagePanel.revalidate();
 				mPagePanel.repaint();
@@ -264,7 +261,7 @@ public class MainWindow extends JFrame {
 		item01.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				mPagePanel.removeAll();
-				mPagePanel.add("고객 정보 확인 ", new GusetInfoPage(mPagePanel));
+				mPagePanel.add("고객 정보 확인 ", new GuestInfoPage(mPagePanel));
 				add(mPagePanel);
 				mPagePanel.revalidate();
 			}

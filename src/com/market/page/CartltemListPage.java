@@ -61,7 +61,7 @@ public class CartltemListPage extends JPanel{
 		buttonPanel.setBounds(0, 450, 1000, 50);
 		add(buttonPanel);
 
-		JLabel buttonLabel = new JLabel("장바구니 비우기");
+		JLabel buttonLabel = new JLabel("장바구니 전체 비우기");
 		buttonLabel.setFont(ft);
 		JButton clearButton = new JButton();
 		clearButton.add(buttonLabel);
